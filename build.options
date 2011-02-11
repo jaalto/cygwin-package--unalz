@@ -1,0 +1,6 @@
+#  When make(1) is being run, variables listed here are read
+#  CYGBUILD_CFLAGS="-O2 -g"
+#  CYGBUILD_CXXLAGS="-O2 -g"
+#  CYGBUILD_LDFLAGS=""          # set to -no-undefined for libraies
+
+CYGBUILD_MAKEFLAGS="posix"

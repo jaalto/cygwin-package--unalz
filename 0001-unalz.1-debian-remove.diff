@@ -1,0 +1,23 @@
+=== modified file 'unalz.1'
+--- unalz.1	2007-12-20 15:37:16 +0000
++++ unalz.1	2007-12-20 15:38:05 +0000
+@@ -27,14 +27,9 @@
+ unzip (1), gzip (1). 
+ .SH "AUTHOR" 
+ .PP 
+-This manual page was written by Yooseong Yang yooseong@debian.org for 
+-the \fBDebian\fP system (but may be used by others).  Permission is 
+-granted to copy, distribute and/or modify this document under 
+-the terms of the GNU General Public License, Version 2 any  
+-later version published by the Free Software Foundation. 
+- 
+-.PP 
+-On Debian systems, the complete text of the GNU General Public 
+-License can be found in /usr/share/common-licenses/GPL. 
++This manual page was written by Yooseong Yang yooseong@debian.org.
++Permission is granted to copy, distribute and/or modify this document
++under the terms of the GNU General Public License, Version 2 any later
++version published by the Free Software Foundation.
+  
+ .\" created by instant / docbook-to-man, Sun 15 Apr 2007, 19:12 
+

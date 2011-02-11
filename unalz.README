@@ -1,0 +1,76 @@
+unalz
+------------------------------------------
+
+Utility to decompress alzip format file
+
+An utility used for decompressing alzip format file. It
+mainly operates on files with names ending in *.alz. This compression
+format is roughly combination of tar + bzip2.
+
+See also <http://www.altools.net>.
+
+Runtime requirements:
+  cygwin
+  libiconv2
+
+Build requirements:
+  cygwin
+  libiconv2
+
+Canonical homepage:
+  http://www.kipple.pe.kr/win/unalz/ (Greek)
+  http://packages.debian.org/unalz
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Maintainer: hardkoder <hardkoder@gmail.com>
+
+License:
+  GPL
+
+Language:
+  BSD
+
+------------------------------------
+
+Build instructions:
+  unpack unalz-0.61-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./unalz*.sh all
+
+This will create:
+  unalz-0.61-1.tar.bz2
+  unalz-0.61-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+/usr/bin/unalz.exe
+/usr/share/doc/Cygwin/unalz-0.61.README
+/usr/share/doc/unalz-0.61/readme.txt
+/usr/share/man/man1/unalz.1.gz
+
+------------------
+
+Port Notes:
+- Makefile: rewrote install target.
+
+----- version 0.61-1 -----
+- Initial release 2007-12-20 Jari Aalto
+- No manual page. Copied one from Debian.
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

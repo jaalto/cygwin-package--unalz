@@ -1,0 +1,31 @@
+diff --git a/Makefile b/Makefile
+index 2b280a2..53ff549 100644
+--- a/Makefile
++++ b/Makefile
+@@ -37,7 +37,7 @@ linux-utf8: unalz
+ 	$(CPP) -c UnAlz.cpp -c UnAlzUtils.cpp -c main.cpp -D_UNALZ_ICONV -D_UNALZ_UTF8 $(CFLAGS)
+ 	$(CPP) $(OBJ) $(LDFLAGS) -o $(BIN)
+ 
+-install:
++install-old:
+ 	cp unalz /usr/local/bin/
+ 
+ clean:
+@@ -82,3 +82,17 @@ bzip2/huffman.o: bzip2/huffman.c
+ bzip2/randtable.o: bzip2/randtable.c
+ 	$(CC) -c bzip2/randtable.c -o bzip2/randtable.o $(CFLAGS)
+ 
++PACKAGE		= unalz
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++
++INSTALL_OBJS_BIN   = $(PACKAGE)
++
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++
++install-bin:
++	# install-bin
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) -s $(INSTALL_OBJS_BIN) $(BINDIR)
++
++install: install-bin
