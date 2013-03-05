@@ -1,0 +1,38 @@
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,8 @@
+ CPP = g++
+ CC  = gcc
+-OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o UnAlzbzlib.o bzip2/blocksort.o bzip2/compress.o bzip2/crctable.o bzip2/huffman.o bzip2/randtable.o
++OBJ = main.o UnAlz.o UnAlzUtils.o UnAlzBz2decompress.o UnAlzBzip2.o
+ BIN = unalz
+-LDFLAGS = -lz
++LDFLAGS = -lz -lbz2
+ CFLAGS += -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 
+ 
+ all:
+--- a/UnAlzBzip2.cpp
++++ b/UnAlzBzip2.cpp
+@@ -11,10 +11,20 @@
+ 
+ //#include "stdafx.h"
+ #include <zlib.h>
+-#include "bzip2/bzlib.h"
+-#include "bzip2/bzlib_private.h"
++#include <bzlib.h>
+ #include "UnAlz.h"
+ 
++// from bzlib_private.h of bzip2
++typedef char            Char;
++typedef unsigned char   Bool;
++typedef unsigned char   UChar;
++typedef int             Int32;
++typedef unsigned int    UInt32;
++typedef short           Int16;
++typedef unsigned short  UInt16;
++
++#define True  ((Bool)1)
++#define False ((Bool)0)
+ 
+ typedef struct {
+   CUnAlz*    handle;

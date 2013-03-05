@@ -1,0 +1,13 @@
+diff --git a/UnAlz.cpp b/UnAlz.cpp
+index ab675dd..2a49cf5 100755
+--- a/UnAlz.cpp
++++ b/UnAlz.cpp
+@@ -1907,7 +1907,7 @@ void CUnAlz::DecryptingData(int nSize, BYTE* data)
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+ UINT32 CUnAlz::CRC32(UINT32 l, BYTE c)
+ {
+-	const unsigned long *CRC_TABLE = get_crc_table();
++	const z_crc_t *CRC_TABLE = get_crc_table();
+ 	return CRC_TABLE[(l ^ c) & 0xff] ^ (l >> 8);
+ }
+ 
