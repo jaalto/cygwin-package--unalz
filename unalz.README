@@ -68,8 +68,8 @@ Files included in the binary distro:
 Port Notes:
 - Makefile: rewrote install target.
 
------ version 0.65-2 -----
-- New release 2014-06-13 Jari Aalto
+----- version 0.65-1 -----
+- New upstream release 2014-06-13 Jari Aalto
 - Wrote patch to deal with x64 iconv() call
   See http://wang.yuxuan.org/blog/2007/7/9/deal_with_2_versions_of_iconv_h
 
