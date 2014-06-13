@@ -3,4 +3,4 @@ ldesc: "An utility used for decompressing alzip format file. It
 mainly operates on files with names ending in *.alz. This compression
 format is roughly combination of tar + bzip2."
 category: Archive
-requires: cygwin libiconv2
+requires: libbz2_1 libgcc1 libiconv2 libstdc++6 zlib0

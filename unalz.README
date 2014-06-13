@@ -10,12 +10,16 @@ format is roughly combination of tar + bzip2.
 See also <http://www.altools.net>.
 
 Runtime requirements:
-  cygwin
+  libbz2_1
+  libgcc1
   libiconv2
+  libstdc++6
+  zlib0
 
 Build requirements:
-  cygwin
-  libiconv2
+  libbz2-devel
+  libiconv-devel
+  zlib-devel
 
 Canonical homepage:
   http://www.kipple.pe.kr/win/unalz/ (Greek)
@@ -44,33 +48,34 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack unalz-0.61-1-src.tar.bz2
+  unpack unalz-0.65-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./unalz*.sh all
 
 This will create:
-  unalz-0.61-1.tar.bz2
-  unalz-0.61-1-src.tar.bz2
+  unalz-0.65-2.tar.xz
+  unalz-0.65-2-src.tar.xz
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-/usr/bin/unalz.exe
-/usr/share/doc/Cygwin/unalz-0.61.README
-/usr/share/doc/unalz-0.61/readme.txt
-/usr/share/man/man1/unalz.1.gz
+  See Cygwin package archive
 
 ------------------
 
 Port Notes:
 - Makefile: rewrote install target.
 
+----- version 0.65-2 -----
+- New release 2014-06-13 Jari Aalto
+- Wrote patch to deal with x64 iconv() call
+  See http://wang.yuxuan.org/blog/2007/7/9/deal_with_2_versions_of_iconv_h
+
 ----- version 0.61-1 -----
 - Initial release 2007-12-20 Jari Aalto
 - No manual page. Copied one from Debian.
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2014 Jari Aalto; Licenced under GPL v2 or later
