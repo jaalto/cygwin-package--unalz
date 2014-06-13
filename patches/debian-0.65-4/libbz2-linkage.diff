@@ -1,3 +1,9 @@
+Description: Use system libbz2
+ Use system libbz2 instead of the internal old version of libbz2.
+Forwarded: not-needed
+Author: Changwoo Ryu <cwryu@debian.org>
+Last-Update: 2013-02-02
+
 --- a/Makefile
 +++ b/Makefile
 @@ -1,8 +1,8 @@

@@ -1,3 +1,9 @@
+Description: Use system zlib
+ Use system zlib instead of the internal old version of zlib.
+Forwarded: not-needed
+Author: Changwoo Ryu <cwryu@debian.org>
+Last-Update: 2013-02-02
+
 --- a/Makefile
 +++ b/Makefile
 @@ -1,9 +1,9 @@
